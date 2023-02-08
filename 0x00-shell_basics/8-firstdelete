@@ -1,2 +1,2 @@
-#!/usr/bish
+#!/bin/bish
 rm /tmp/my_first_directory/betty
