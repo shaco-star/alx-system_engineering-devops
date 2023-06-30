@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# Display process that containing the bash word
+# without using ps
+
+pgrep -l bash
