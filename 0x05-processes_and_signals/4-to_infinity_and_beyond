@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 # Display text indefinitely
 
-while true; do echo "To infinity and beyond"; done
+while true; do echo "To infinity and beyond"; sleep2; done
