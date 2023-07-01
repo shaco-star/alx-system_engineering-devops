@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# Display log of apache file format "OCCURENCE_NUMBER IP STATUS_CODE"
+
+awk '{ printf "%s %s\n", $1, $9}' "apache-access.log" | sort | uniq -c | sort -nr
+
