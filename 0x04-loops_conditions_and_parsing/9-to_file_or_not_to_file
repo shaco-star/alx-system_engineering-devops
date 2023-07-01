@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # Give information about "school" file
 
-file="./school"
+file="school"
 
 if [ -e "$file" ]
 then
@@ -12,6 +12,7 @@ then
 	else
 		echo "school file is empty"
 	fi
+
 	if [ -f  "$file" ]
 	then
 		echo "school is regular file"
