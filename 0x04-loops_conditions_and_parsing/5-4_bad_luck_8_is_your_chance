@@ -5,10 +5,14 @@ counter=1
 
 while [ $counter -le 10 ]
 do
-	echo "Best School"
-	if [ $counter -eq 9 ]
+	if [ $counter -eq 4 ]
 	then
-		echo "Hi"
+		echo "bad luck"
+	elif [ $counter -eq 8 ]
+	then
+		echo "good luck"
+	else
+		echo "Best School"
 	fi
 	((counter++))
 done
