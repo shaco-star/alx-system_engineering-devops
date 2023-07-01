@@ -1,20 +1,20 @@
 #!/usr/bin/env bash
-# This script is displaying "Best school" 10 times
+# if 4 "bad luck from China"
+# if 9 "bad luck from Japan"
+# if 17 "bad luck from Italy"
 
 counter=1
 
 while [ $counter -le 20 ]
 do
 	echo "$counter"
-	if [ $counter -eq 4 ]
-	then
-		echo "bad luck from China"
-	elif [ $counter -eq 9 ]
-	then
-		echo "bad luck from Japan"
-	elif [ $counter -eq 17 ]
-	then
-		echo "bad luck from Italy"
-	fi
+	case $counter in
+		4)
+			echo "bad luck from China";;
+		9)
+			echo "bad luck from Japan";;
+		17)
+			echo "bad luck from Italy";;
+	esac
 	((counter++))
 done
