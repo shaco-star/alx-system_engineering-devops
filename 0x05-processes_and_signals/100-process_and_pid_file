@@ -14,12 +14,12 @@ termfunc()
 	exit
 }
 
-trap 'echo "Y U no love me?!"' SIGINT
-trap 'echo "I hate the kill command" && termfunc' SIGTERM
-trap 'termfunc' SIGQUIT
 
 while true
 do
     echo "To infinity and beyond"
     sleep 2
+    trap 'echo "Y U no love me?!"' SIGINT
+    trap 'echo "I hate the kill command" && termfunc' SIGTERM
+    trap 'termfunc' SIGQUIT
 done
