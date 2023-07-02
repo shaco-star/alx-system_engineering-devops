@@ -15,7 +15,7 @@ then
 
 	if [ -f  $file ]
 	then
-		echo "school is regular file"
+		echo "school is a regular file"
 	fi
 else
 	echo "school file does not exist"
