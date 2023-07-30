@@ -1,0 +1,17 @@
+1 - What are firewalls for
+>>> Firewalls are network security systems that monitor and control incoming and outgoing network traffic based on predetermined security rules.
+
+2 - Why is the traffic served over HTTPS
+>>> Traffic is served over HTTPS to provide secure communication over a computer network by encrypting the data being transmitted.
+
+3 - What monitoring is used for
+>>> To provide a useful base for evaluation, identify strengths and weaknesses, set and improve performance benchmarks and standards, reduce manual effort and cost expectations, reward employee strengths, tackle distraction, prevent burnout, reduce supervision, pay employees accurately, minimize software expenditure, improve data protection, and make intelligent decisions based on valuable data.
+
+4 - How the monitoring tool is collecting data
+>>> Some tools collect data through log analysis while others use agents installed on the monitored system to collect data.
+
+5 - Explain what to do if you want to monitor your web server QPS
+>>> We can use open source tools such as Nagios, Cacti, or Munin. 
+>>> We can also use commercial products such as SolarWinds, Datadog, or New Relic or cloud-based solutions such as Amazon CloudWatch, Microsoft Azure Monitor, or Google Cloud Monitoring. 
+
+Infrastructure Design : https://drive.google.com/file/d/1eCPsma-h0YT8TFBx3Bj_nMNym3txT_yu/view?usp=sharing

@@ -1,0 +1,7 @@
+A load balancer can be set up in two different configurations: Active-Active and Active-Passive. In an Active-Active configuration, the load balancer spreads out the workload’s traffic among multiple nodes, achieving load balancing. This distributes workloads across all nodes in order to prevent any single node from getting overloaded1. In an Active-Passive configuration, the server load balancer recognizes a failed node and redirects traffic to the next available node. The main server handles the full workload, while a backup server remains on standby, only activating in the event of a failure.
+
+In a database Primary-Replica (or Master-Slave) cluster, there are several data bearing nodes and optionally one arbiter node. Of the data bearing nodes, one and only one member is deemed the primary node, while the other nodes are deemed secondary nodes. The primary node receives all write operations. The replica nodes can only process read-only transactions. To keep the replicas in-sync, the primary nodes must provide the list of changes that were done by all committed transactions.
+
+The main difference between the Primary node and the Replica node is that while the Primary node receives all write operations, Replica nodes can only process read-only transactions.
+
+Infrastructure Design : https://drive.google.com/file/d/1ZdKjwOV2RQF1BXi_gl7DRqaDUk89bsXA/view?usp=sharing
