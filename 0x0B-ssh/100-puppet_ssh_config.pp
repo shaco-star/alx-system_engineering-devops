@@ -1,8 +1,12 @@
-# Puppet rule to create ssh config file
-class { 'ssh::client':
-  options => {
-    'IdentityFile' => '~/.ssh/school',
-    'IdentitiesOnly' => 'yes',
-    'PasswordAuthentication' => 'no',
-  },
+# puppet rule to create ssh config file
+file_line { 'Turn off passwd auth':
+  ensure => 'present',
+  path   => '/etc/ssh/ssh_config',
+  line   => '    PasswordAuthentication no',
+}
+
+file_line { 'Declare identity file':
+  ensure => 'present',
+  path   => '/etc/ssh/ssh_config',
+  line   => '    IdentityFile ~/.ssh/school',
 }
