@@ -1,0 +1,7 @@
+#Config file
+Host *
+    IdentityFile ~/.ssh/school
+    IdentitiesOnly yes
+    PasswordAuthentication no
+    ChallengeResponseAuthentication no
+    UsePAM no
