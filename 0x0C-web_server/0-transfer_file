@@ -12,6 +12,7 @@ ip=$2
 username=$3
 ssh_key_path=$4
 
-#Transfer the file
+#Disable strict host
 ssh -o StrictHostKeyChecking=no "$username"@"$ip"
+#Transfer the file
 scp -i "$ssh_key_path $file_path" "$username"@"$ip":~/
