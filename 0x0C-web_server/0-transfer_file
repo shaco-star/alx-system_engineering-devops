@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 # Check the number of parameters
 if [ $# -lt 4 ]; then
@@ -11,5 +11,5 @@ ip=$2
 username=$3
 ssh_key_path=$4
 
-ssh -o StrictHostKeyChecking=no $username@$ip
-scp -i $ssh_key_path $file_path $username@$ip:~/
+ssh -o StrictHostKeyChecking=no "$username"@"$ip"
+scp -i "$ssh_key_path $file_path" "$username"@"$ip":~/
