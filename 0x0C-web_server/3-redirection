@@ -4,8 +4,6 @@
 # Install Nginx
 sudo apt-get install -y nginx
 
-# Start Nginx
-sudo service nginx start
 
 # Create an index.html file with the string "Hello World!"
 echo "Hello World!" | sudo tee /var/www/html/index.html
@@ -28,5 +26,5 @@ sudo ln -s /etc/nginx/sites-available/redirection /etc/nginx/sites-enabled/
 # Test the Nginx configuration for syntax errors
 sudo nginx -t
 
-# Reload the Nginx service to apply the changes
-sudo service nginx reload
+# Start Nginx
+sudo service nginx start
