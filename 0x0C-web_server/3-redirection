@@ -9,11 +9,11 @@ sudo apt-get install -y nginx
 echo "Hello World!" | sudo tee /var/www/html/index.html
 
 #Give the user  ownership to website files
-sudo chown -R $USER:$USER /var/www/html
+sudo chown -R "$USER":"$USER" /var/www/html
 sudo chmod -R 755 /var/www
 
 # Redirect to /redirect_me to a youtube video
-sed -i '37i\rewrite ^/redirect_me https://www.youtube.com/watch?v=b9yoUWjLlTM&t=4s&ab_channel=KannaE64;' /etc/nginx/sites-available/default
+sed -i '37i\rewrite ^/redirect_me https://www.youtube.com/watch?v=b9yoUWjLlTM&t=4s&ab_channel=KannaE64 permanent;' /etc/nginx/sites-available/default
 
 # Test the Nginx configuration for syntax errors
 sudo nginx -t
