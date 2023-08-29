@@ -17,7 +17,7 @@ server {
     server_name localhost;
 
     location /redirect_me {
-        return 301 http://example.com/;
+        return 301 https://www.youtube.com/watch?v=b9yoUWjLlTM&t=4s&ab_channel=KannaE64;
     }
 }
 EOF'
