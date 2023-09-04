@@ -1,0 +1,37 @@
+#!/usr/bin/env bash
+# Configures an Nginx server to redirect /redirect_me to another page
+
+# Install Nginx
+sudo apt-get install -y nginx
+
+
+# Create an index.html file with the string "Hello World!"
+echo "Hello World!" | sudo tee /var/www/html/index.html
+
+
+sudo bash -c 'cat > /etc/nginx/sites-available/redirection <<EOF
+server {
+    listen 80;
+    server_name localhost;
+
+    location /redirect_me {
+        return 301 https://www.youtube.com/watch?v=QH2-TGUlwu4;
+    }
+}
+EOF'
+
+# Enable the server block by creating a symbolic link to the sites-enabled directory
+sudo ln -s /etc/nginx/sites-available/redirection /etc/nginx/sites-enabled/
+
+# Define the Nginx configuration file path
+NGINX_CONF_FILE="/etc/nginx/sites-available/default"
+
+# Add the custom header to the Nginx configuration file
+sudo sed -i '/server_name _;/a \ \ \ \ add_header X-Served-By $hostname;' "$NGINX_CONF_FILE"
+
+# Test the Nginx configuration for syntax errors
+sudo nginx -t
+
+# Start Nginx
+sudo service nginx start
+
