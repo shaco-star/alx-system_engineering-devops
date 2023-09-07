@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+# Debugging
+
+# Remove the default site from sites-enabled
+sudo rm /etc/nginx/sites-enabled/default
+
+# Create a symbolic link from sites-available to sites-enabled
+sudo ln -s /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
+
+# Restart the nginx service
+sudo service nginx restart
