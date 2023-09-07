@@ -1,11 +1,5 @@
 #!/usr/bin/env bash
 # Using what you did for task #0, make your fix short and sweet.
-
-# Create a symbolic link from sites-available to sites-enabled, overwriting any existing link
 sudo ln -sf /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
-
-# Start the nginx service
 sudo service nginx start
-
-# Remove the nginx.pid file to prevent the service from reporting its status
 sudo rm /run/nginx.pid
