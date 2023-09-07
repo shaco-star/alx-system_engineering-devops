@@ -2,17 +2,17 @@
 
 # Function to display information about subdomains
 display_info() {
-    domain=$1
-    subdomain=$2
+    domain="$1"
+    subdomain="$2"
     if [ -z "$subdomain" ]; then
         # Display information for www, lb-01, web-01, and web-02 subdomains
         for sub in www lb-01 web-01 web-02; do
-            display_info $domain $sub
+            display_info "$domain" "$sub"
         done
     else
         # Get DNS record information using dig command and awk to parse the output
-        record=$(dig +short $subdomain.$domain | awk '{print $4}')
-        destination=$(dig +short $subdomain.$domain | awk '{print $5}')
+        record=$(dig +short "$subdomain"."$domain" | awk '{print $4}')
+        destination=$(dig +short "$subdomain"."$domain" | awk '{print $5}')
         # Display the information in the specified format
         echo "The subdomain $subdomain is a $record record and points to $destination"
     fi
@@ -25,4 +25,4 @@ if [ -z "$1" ]; then
 fi
 
 # Call display_info function with provided arguments
-display_info $1 $2
+display_info "$1" "$2"
