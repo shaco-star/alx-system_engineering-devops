@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # Change nginx user to nginx in nginx.conf
-sed -i 's/user .*/user nginx;/' /etc/nginx/nginx.conf
+sed -i 's/#user .*/user nginx;/' /etc/nginx/nginx.conf
 
 # Change listen directive to required port 8080 in default server block
 sed -i 's/listen .*/listen 8080;/' /etc/nginx/sites-available/default
