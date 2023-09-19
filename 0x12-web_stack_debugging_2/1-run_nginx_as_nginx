@@ -4,5 +4,6 @@ sed -i 's/user .*/user nginx;/' /etc/nginx/nginx.conf
 
 # Change listen directive to required port 8080 in default server block
 sed -i 's/listen .*/listen 8080;/' /etc/nginx/sites-available/default
-
+chmod 644 /etc/nginx/nginx.conf
+pkill apache2
 sudo -u nginx service nginx start
