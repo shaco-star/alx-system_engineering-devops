@@ -18,7 +18,7 @@ if __name__ == "__main__":
 
     file_name = f'{id}.csv'
     with open(file_name, 'w', newline='') as file:
-        write = csv.writer(file)
+        write = csv.writer(file, quoting=csv.QUOTE_ALL)
         [write.writerow(
             [id, username, task['completed'], task['title']]
             ) for task in tasks]
