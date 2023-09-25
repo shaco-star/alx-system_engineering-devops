@@ -19,7 +19,6 @@ if __name__ == "__main__":
     file_name = f'{id}.JSON'
     with open(file_name, "w") as jsonfile:
         json.dump(
-                {id: [
-                    {"task": task['title'], "completed": task[
-                        'completed'], "username": username}
-                    for task in tasks]}, jsonfile)
+                {id: [{"task": t.get("title"), "completed": t.get(
+                    "completed"), "username": username}
+                    for t in tasks]}, jsonfile)
