@@ -16,7 +16,7 @@ if __name__ == "__main__":
         user = user[0]
     username = user['username']
 
-    file_name = f'{id}.JSON'
+    file_name = f'{id}.json'
     with open(file_name, "w") as jsonfile:
         json.dump(
                 {id: [{"task": t.get("title"), "completed": t.get(
