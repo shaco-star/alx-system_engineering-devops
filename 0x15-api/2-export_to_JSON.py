@@ -12,8 +12,6 @@ if __name__ == "__main__":
     user = requests.get(url+'/users', params={'id': id}).json()
     tasks = requests.get(url+'/todos', params={'userId': id}).json()
 
-    if isinstance(user, list):
-        user = user[0]
     username = user['username']
 
     file_name = f'{id}.JSON'
