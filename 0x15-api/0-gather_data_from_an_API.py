@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """Return completed tasks for an employee"""
-import sys
 import requests
+import sys
 
 if __name__ == "__main__":
     id = sys.argv[1]

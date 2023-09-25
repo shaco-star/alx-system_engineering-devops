@@ -1,8 +1,9 @@
 #!/usr/bin/python3
 """Return tasks for an employee and save in to JSON file"""
-import sys
-import requests
+
 import json
+import requests
+import sys
 
 if __name__ == "__main__":
     id = sys.argv[1]
