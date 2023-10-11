@@ -21,7 +21,9 @@ def recurse(subreddit, hot_list=[], after=None, counter=0):
         data = response.json()['data']
         hot_list.extend([post['data']['title'] for post in data['children']])
         counter += 1
-        print(f"Recursive call {counter}: Added {len(data['children'])} posts to the list")
+        print(
+                f
+                "Recursive call {counter}: Added {len(data['children'])} posts to the list")
         if data['after']:
             return recurse(subreddit, hot_list, data['after'], counter)
         else:
