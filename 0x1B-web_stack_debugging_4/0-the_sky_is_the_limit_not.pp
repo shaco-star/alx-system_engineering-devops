@@ -1,8 +1,13 @@
 # This Puppet manifest increases the amount of traffic an Nginx server can handle.
 
+# Ensure Nginx is installed
+package { 'nginx':
+  ensure => installed,
+} ->
+
 # Increase the ULIMIT of the default file
 exec { 'fix--for-nginx':
-  command => 'sed -i "s/15/4096/" /etc/default/nginx',
+  command => 'test -f /etc/default/nginx && sed -i "s/15/4096/" /etc/default/nginx',
   path    => '/usr/local/bin/:/bin/',
   require => Package['nginx'],
 } ->
