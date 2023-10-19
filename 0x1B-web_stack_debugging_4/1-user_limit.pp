@@ -1,10 +1,5 @@
 # This Puppet manifest enables the user 'holberton' to login and open files without error by increasing the file limits.
 
-# Ensure the 'holberton' user exists
-user { 'holberton':
-  ensure => present,
-} ->
-
 # Increase hard file limit for Holberton user.
 exec { 'increase-hard-file-limit-for-holberton-user':
   command => 'grep -q "^holberton hard" /etc/security/limits.conf &&
