@@ -18,4 +18,3 @@ exec { 'increase-soft-file-limit-for-holberton-user':
   path    => '/usr/local/bin/:/bin/',
   require => User['holberton'],
 }
-
