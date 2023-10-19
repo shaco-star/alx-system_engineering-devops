@@ -19,4 +19,3 @@ exec { 'nginx-restart':
   refreshonly => true,
   subscribe   => Exec['fix--for-nginx'],
 }
-
