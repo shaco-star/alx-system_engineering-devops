@@ -1,8 +1,5 @@
 # This Puppet manifest increases the amount of traffic an Nginx server can handle.
 
-package { 'nginx':
-  ensure => installed,
-} ->
 
 # Increase the ULIMIT of the default file
 exec { 'fix--for-nginx':
