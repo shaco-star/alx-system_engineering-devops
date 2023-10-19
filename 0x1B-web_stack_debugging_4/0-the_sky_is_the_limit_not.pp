@@ -1,6 +1,5 @@
 # This Puppet manifest increases the amount of traffic an Nginx server can handle.
 
-# Ensure Nginx is installed
 package { 'nginx':
   ensure => installed,
 } ->
